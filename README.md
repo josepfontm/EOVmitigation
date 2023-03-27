@@ -1,1 +1,1 @@
-# EOV Mitigation for Structural Health Monitoring
+# Interpreting Environemntal Variability from Damage Sensitive Features
