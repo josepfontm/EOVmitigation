@@ -1,1 +1,1 @@
-# pc_informed
+# EOV Mitigation for Structural Health Monitoring
