@@ -1,7 +1,6 @@
 @software{EOVmitigation,
   author = {Font-Moré, Josep},
-  doi = {},
-  month = {03},
+  month = {3},
   title = {EOVmitigation},
   url = {https://github.com/josepfontm/EOVmitigation},
   version = {0.1},
