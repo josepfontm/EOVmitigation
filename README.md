@@ -5,6 +5,7 @@
 In the future I intend to merge these methods into the [Pymodal library](https://github.com/grcarmenaty/pymodal).
 
 ## Interpreting Environmental Variability from Damage Sensitive Features
+Results presented in the 10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)
 
 ### Abstract:
 Mitigation of Environmental and Operational Variabilities (EOVs) remains one of the main challenges to adopt Structural Health Monitoring (SHM) technologies. Its implementation in wind turbines is one of the most challenging due to the adverse weather and operating conditions these structures have to face. This work proposes an EOV mitigation procedure based on Principal Component Analysis (PCA) which uses EOV-Sensitive Principal Components (PCs) as a surrogate of EOVs, which may be hard to measure or correctly quantify in real-life structures. EOV-Sensitive PCs are conventionally disregarded in an attempt to mitigate the effect of Environmental and Operational Variabilities. Instead, this method proposes their use as independent variables in non-linear regression models, similar to how Environmental and Operational Parameters (EOPs) are used in explicit procedures.
