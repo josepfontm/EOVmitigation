@@ -1,6 +1,8 @@
 # EOVmitigation
 
-**Introduction:** This repository contains several EOV Procedures which I have used in different publications/works. In the future I intend to merge these methods into the [Pymodal library](https://github.com/grcarmenaty/pymodal).
+**Introduction:** This repository contains several EOV Procedures which I have used in different publications/works. Additional functions which aid in plotting results are also included.
+
+In the future I intend to merge these methods into the [Pymodal library](https://github.com/grcarmenaty/pymodal).
 
 ## Interpreting Environmental Variability from Damage Sensitive Features
 
