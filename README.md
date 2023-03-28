@@ -15,9 +15,9 @@ The work results are validated under an experimental dataset of a small-scale wi
 ### EOV Procedures:
 - [Implicit PCA](https://www.sciencedirect.com/science/article/abs/pii/S0888327004001785): Conventionally, the first Principal Components (PCs) are disregarded to correct Damage Sensitive Features (DSFs). The rationale behind Implicit PCA is that PCs can be categorized between EOV-Sensitive, EOV-Insensitive and Noise, in this order [[1]](#1).
 
-- Explicit PCA Regression: A non-linear method is used to find the best fitting polynomial function for the data in the least squares sense. Temperature (or other EOVs) are used as independent variables (predictors), while Principal Components are used as dependent or explained variables.
+- Explicit PCA Regression: A non-linear method is used to find the best fitting polynomial function for the data in the least squares sense. Temperature (or other EOVs) are used as independent variables (predictors), while Principal Components are used as dependent or explained variables. The following papers describes a similar method, but using natural frequencies as DSFs, instead of PCA results.
 
-- PC-Informed Regression (PROPOSED):
+- PC-Informed Regression (PROPOSED): In this publication, we proposed a method that uses the so-called EOV-Sensitive PCs as a surrogate of the Environmental and Operational variables driving the non-stanionary behaviour in the DSFs. Hence, a regression model using EOV-Sensitive PCs as predictors and remaining PCs as explained variables.
 
 ### References:
 <a id="1">[1]</a> 
