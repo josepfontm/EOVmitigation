@@ -1,6 +1,9 @@
 =================
-EOVmitigation
+PyModal Library
 =================
+------------------------------------------------------
+Simulate, load, store and represent your modal data
+------------------------------------------------------
 
 
 # Interpreting Environmental Variability from Damage Sensitive Features
