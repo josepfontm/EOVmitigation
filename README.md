@@ -1,17 +1,15 @@
-# TPMSgen
+# EOVmitigation
 
-**Triply Periodic Minimal Surfaces**, also known as TPMS, are a class of mathematical surfaces that are periodic in all three spatial dimensions. They are known for their unique geometric properties, such as a lack of local extrema and a high degree of symmetry. These surfaces have a wide range of applications, including in architecture, engineering, and materials science. They have been studied extensively by mathematicians and have been found to have many interesting properties, such as the existence of an infinite number of distinct TPMS. They are also related to other mathematical structures such as soap films, minimal surfaces, and constant mean curvature surfaces.
+**Introduction:** This repository contains several EOV Procedures which I have used in different publications/works. In the future I intend to merge these methods into the Pymodal library.
 
 [**TPMSgen**](https://github.com/albertforesg/TPMSgen) is a powerful program based on **Python** that allows users to easily design and generate Triply Periodic Minimal Surface (TPMS) geometries. It features a user-friendly interface with multiple **design parameters** (TPMS typology, specimen dimensions, unit cell size…) that makes it simple to generate their corresponding 3D model employing their mathematical equations. In addition, the program offers the possibility to export the 3D model in the **.STL** file format, which can be later used for fabrication with additive manufacturing technologies or in finite element simulation studies. This makes [**TPMSgen**](https://github.com/albertforesg/TPMSgen) a versatile tool for architects, engineers, and material scientists who are interested in exploring the unique properties of TPMS and their potential applications.
 
 ![TPMSgen](https://user-images.githubusercontent.com/81706331/212754604-6bf67f0f-b447-4496-8e0a-cb3c199b3c98.png)
 
 ---
-#EOVmitigation
-
 
 ##Introduction
-This repository contains several EOV Procedures which I have used in different publications/works. In the future I intend to merge these methods into the Pymodal library.
+
 
 ##Interpreting Environmental Variability from Damage Sensitive Features
 
