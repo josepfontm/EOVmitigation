@@ -3,13 +3,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA
 
-def implicit_pca(self,
+def implicit_pca(data: np.ndarray,
                      damage_existence: np.ndarray,
                      eovs: np.ndarray,
                      train_proportion: float,
                      n_pcs: int,
                      discarded_pcs: np.ndarray,
-                     save_results: bool):
+                     print_results: bool = True,
+                     save_results: bool = True):
 
         """
             EOV Mitigation using Implicit PCA.
@@ -32,40 +33,48 @@ def implicit_pca(self,
                 List of damage indexes for each PSD.
         """
 
-        data = self.value
-
-        eovs = eovs.T
+        labels = np.hstack((eovs,damage_existence))
 
         #Flatten Power Spectral Density matrices if more than one accelerometer is used.
         data_flatten = data.reshape(-1,np.shape(data)[2])
         data_flatten = data_flatten.T
 
-        #Create Pandas Data Frame from Power Spectral Density arrays
-        freq_vector = self.freq_vector
-        lines = self.lines
-
-        names = []
-        
-        for line in range(lines):
-            for freq in freq_vector:
-                names.append('Line:'+str(line)+'_Freq:'+str(freq))
+        data_u = []
+        data_d = []
+        labels_u = []
+        labels_d = []
 
         #Split dataset between undamaged and damaged observations
-        data_u = data_flatten[(damage_existence == 0),:]
-        data_d = data_flatten[(damage_existence == 1),:]
-        eovs_u = eovs[(damage_existence == 0)]
-        eovs_d = eovs[(damage_existence == 1)]
+        print('--------------FOR------------')
+        for i in range(np.shape(labels)[0]):
+            if damage_existence[i] == 1: #Undamaged
+                if data_u == []:
+                    data_u = data_flatten[i,:]
+                    labels_u = labels[i]
+                else:
+                    data_u = np.vstack((data_u, data_flatten[i,:]))
+                    labels_u = np.vstack((labels_u, labels[i,:]))
+            elif damage_existence[i] == 0: #Damaged
+                if data_d == []:
+                    data_d = data_flatten[i,:]
+                    labels_d = labels[i]
+                else:
+                    data_d = np.vstack((data_d, data_flatten[i,:]))
+                    labels_d = np.vstack((labels_d, labels[i,:]))
 
-        data_train, data_u_test, eovs_train, eovs_u_test = train_test_split(data_u,
-                                                                            eovs_u, 
-                                                                            train_size = train_proportion, 
-                                                                            random_state = 42,
-                                                                            stratify = eovs_u)
+        np.savetxt("data_u.csv",data_u,delimiter=",")
+
+        data_train, data_u_test, labels_train, labels_u_test = train_test_split(data_u,
+                                                                                labels_u, 
+                                                                                train_size = train_proportion, 
+                                                                                random_state = 42,
+                                                                                stratify = labels_u[:,:-1])
 
         data_test = np.vstack((data_u_test, data_d))
-        # eovs_test = np.vstack((eovs_u_test, eovs_d))
+        labels_test = np.vstack((labels_u_test, labels_d))
 
         dataset = np.vstack((data_train, data_test))
+        labels_dataset = np.vstack((labels_train, labels_test))
 
         #Use training data to establish normalization
         scaler = MinMaxScaler()
@@ -74,7 +83,6 @@ def implicit_pca(self,
         #Normalize data
         data_train_scaled = scaler.transform(data_train)
         data_test_scaled = scaler.transform(data_test)
-        dataset_scaled = scaler.transform(dataset)
 
         #Apply Principal Components Analysis (PCA)
         pca = PCA(n_components=n_pcs)
@@ -91,6 +99,8 @@ def implicit_pca(self,
         test_pca = np.delete(test_pca, discarded_pcs, 1)
         dataset_pca = np.delete(dataset_pca, discarded_pcs, 1)
 
+        np.savetxt("dataset_pca.csv",dataset_pca,delimiter=",")
+
         #Mahalanobis Distance
         sigma = np.linalg.inv(np.cov(train_pca.T))
 
@@ -106,3 +116,61 @@ def implicit_pca(self,
 
         if save_results == True:
             np.savetxt("di_implicit_pca_npcs_"+str(n_pcs)+".csv",di_array,delimiter=",")
+
+        #Calculate F1 Score
+        di_train = di_array[0:len(train_pca)]
+
+        threshold = np.percentile(di_train,q=95)
+
+        y_pred = di_array < threshold
+        y_pred = y_pred.astype(int)
+
+        u = 0
+        fa = 0
+        ud = 0
+        d = 0
+
+        damage_existence = labels_dataset[:,-1]
+
+        for i in range(np.shape(dataset_pca)[0]):
+            if y_pred[i] == 1 and damage_existence[i] == 1:
+                u = u + 1
+            elif y_pred[i] == 1 and damage_existence[i] == 0:
+                fa = fa + 1
+            elif y_pred[i] == 0 and damage_existence[i] == 1:
+                ud = ud + 1
+            elif y_pred[i] == 0 and damage_existence[i] == 0:
+                d = d + 1
+
+        print('Results') 
+        print(u)
+        print(fa)
+        print(ud)
+        print(d)
+        print(u+fa+ud+d)
+
+        print(damage_existence)
+        print(y_pred)
+
+        np.savetxt("y_pred.csv",y_pred,delimiter=",")
+        np.savetxt("di_array.csv",di_array,delimiter=",")
+        np.savetxt("damage_existence.csv",damage_existence,delimiter=",")
+
+        f1 = f1_score(damage_existence, y_pred)
+
+        if print_results == True:
+            print('IMPLICIT PCA')
+            print('---DATA---')
+            print('How many PCs are used? ' + str(n_pcs))
+            print('How many PCs have been discarded? ' + str(len(discarded_pcs)))
+
+            print('---PREDICTIONS---')
+            print('Undamaged:' + str(u))
+            print('False Alarm:' + str(fa))
+            print('Unnoticed Damagae:' + str(ud))
+            print('Damage:' + str(d))
+
+            print('---PERFORMANCE---')
+            print('F1 Score: ' + str(f1))
+
+        return di_array,f1,threshold,y_pred
