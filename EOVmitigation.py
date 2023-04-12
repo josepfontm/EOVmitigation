@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA
 
-def implicit_pca(data: np.ndarray,
+def implicit_pca(self,
                      damage_existence: np.ndarray,
                      eovs: np.ndarray,
                      train_proportion: float,
@@ -20,12 +20,20 @@ def implicit_pca(data: np.ndarray,
             ----------
             psd : 3D array
                 Collection of Power Spectral Density arrays.
-            damage_existence : list
+            damage_existence : 1D array (rows should correspond to different observations)
                 0 equals undamaged conditions and 1 equals damaged conditions.
+            eovs : 1D or 2D array (rows should correspond to different observations)
+                Information regarding the environmental and/or operational conditions of a given observation.
+            train_proportion : float
+                Value between 0 and 1, which splits data between training and test.
             n_pcs : int
                 Number of Principal Components extracted from the Power Spectral Density array.
             discarded_pcs : list
                 List of PCs discarded
+            print_results : bool
+                Option to print results from EOV Mitigation Procedure on terminal.
+            save_results : bool
+                Option to save results from EOV Mitigation Procedure in a .csv file
 
             Returns
             ----------
@@ -33,6 +41,7 @@ def implicit_pca(data: np.ndarray,
                 List of damage indexes for each PSD.
         """
 
+        data = self.value
         labels = np.hstack((eovs,damage_existence))
 
         #Flatten Power Spectral Density matrices if more than one accelerometer is used.
@@ -173,4 +182,4 @@ def implicit_pca(data: np.ndarray,
             print('---PERFORMANCE---')
             print('F1 Score: ' + str(f1))
 
-        return di_array,f1,threshold,y_pred
+        return di_array,f1,threshold
