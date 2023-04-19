@@ -2,7 +2,9 @@
 
 **Introduction:** This repository contains several EOV Procedures which I have used in different publications/works. Additional functions which aid in plotting results are also included.
 
-In the future I intend to merge these methods into the [Pymodal library](https://github.com/grcarmenaty/pymodal).
+The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal). 
+This is an on-going project from the Group of Applied Mechanics and Advanced Manufacturing (GAM) at IQS School of Engineering-URL.
+In addition, a utility function "plot_control_chart" can be called to graph the results from EOV Mitigation Procedures.
 
 ## Interpreting Environmental Variability from Damage Sensitive Features
 Results presented in the 10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)
