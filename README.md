@@ -20,8 +20,9 @@ Components (PCs) as a surrogate of EOVs, which may be hard to measure or correct
 quantify in real-life structures. EOV-Sensitive PCs are conventionally disregarded in an attempt
 to mitigate the effect of environmental variability. Instead, we postulate to use these
 variables as predictors in non-linear regression models, similar to how Environmental and Operational
-Parameters (EOPs) are used in explicit EOV mitigation procedures. The work results
-are validated under an experimental dataset of a small-scale wind turbine blade with various
+Parameters (EOPs) are used in explicit EOV mitigation procedures. 
+
+The work results are validated under an experimental dataset of a small-scale wind turbine blade with various
 cracks artificially introduced. Temperature conditions are varied using a climate chamber. The
 proposed method outperforms the conventional-PCA based approach, implying that directly disregarding
 Sensitive-EOV PCs is detrimental in the decision-making within a SHM methodology.
