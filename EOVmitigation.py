@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
 def implicit_pca(self,
@@ -86,7 +86,7 @@ def implicit_pca(self,
         labels_dataset = np.vstack((labels_train, labels_test))
 
         #Use training data to establish normalization
-        scaler = MinMaxScaler()
+        scaler = StandardScaler()
         scaler.fit(data_train)
 
         #Normalize data
