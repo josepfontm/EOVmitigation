@@ -1,13 +1,14 @@
 # EOVmitigation
 
-**Introduction:** This repository contains several EOV Procedures which I have used in different publications/works. Additional functions which aid in plotting results are also included.
+**Introduction:** This repository contains different EOV Procedures which I have used in publications/works. Additional functions which aid in plotting results are also included.
 
 The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal). 
 This is an on-going project from the Group of Applied Mechanics and Advanced Manufacturing (GAM) at IQS School of Engineering-URL.
 In addition, a utility function "plot_control_chart" can be called to graph the results from EOV Mitigation Procedures.
 
 ## Interpreting Environmental Variability from Damage Sensitive Features
-Results presented in the 10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)
+Results presented in the 10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023).
+Preprocessing folder contains different files I used to preprocess the data from the [Small-scale wind turbine blade] (https://onlinelibrary.wiley.com/doi/epdf/10.1002/stc.2660) provided by the [Chair of Structural Mechanics and Monitoring](https://chatzi.ibk.ethz.ch/) from ETH Zürich
 
 ### Abstract:
 Mitigation of Environmental and Operational Variabilities (EOVs) remains one of the main challenges to adopt Structural Health Monitoring (SHM) technologies. Its implementation in wind turbines is one of the most challenging due to the adverse weather and operating conditions these structures have to face. This work proposes an EOV mitigation procedure based on Principal Component Analysis (PCA) which uses EOV-Sensitive Principal Components (PCs) as a surrogate of EOVs, which may be hard to measure or correctly quantify in real-life structures. EOV-Sensitive PCs are conventionally disregarded in an attempt to mitigate the effect of Environmental and Operational Variabilities. Instead, this method proposes their use as independent variables in non-linear regression models, similar to how Environmental and Operational Parameters (EOPs) are used in explicit procedures.
