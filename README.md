@@ -2,13 +2,11 @@
 
 **Introduction:** This repository contains different EOV Procedures which I have used in publications/works. Additional functions which aid in plotting results are also included.
 
-The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal). 
-This is an on-going project from the Group of Applied Mechanics and Advanced Manufacturing (GAM) at IQS School of Engineering-URL.
-In addition, a utility function "plot_control_chart" can be called to graph the results from EOV Mitigation Procedures.
+The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal), an on-going project from the [Group of Applied Mechanics and Advanced Manufacturing (GAM)](https://techtransfer.iqs.edu/grupos/applied-mechanics-and-advanced-manufacturing) at IQS School of Engineering-URL.
 
 ## Interpreting Environmental Variability from Damage Sensitive Features
-Results presented in the 10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023).
-Preprocessing folder contains different files I used to preprocess the data from the [Small-scale wind turbine blade](https://onlinelibrary.wiley.com/doi/epdf/10.1002/stc.2660/) provided by the [Chair of Structural Mechanics and Monitoring](https://chatzi.ibk.ethz.ch/) from ETH Zürich
+Results presented in the [10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)](https://www.smart2023.eu/).
+Preprocessing folder contains different files I used to preprocess the data from the [Small-scale wind turbine blade](https://onlinelibrary.wiley.com/doi/epdf/10.1002/stc.2660/) provided by the [Chair of Structural Mechanics and Monitoring](https://chatzi.ibk.ethz.ch/) from ETH Zürich.
 
 ### Abstract:
 Mitigation of Environmental and Operational Variabilities (EOVs) remains one
