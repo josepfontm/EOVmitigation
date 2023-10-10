@@ -27,8 +27,6 @@ Sensitive-EOV PCs is detrimental in the decision-making within a SHM methodology
 In addition, the proposed method achieves similar results to an equivalent explicit procedure,
 suggesting that EOV-Sensitive PCs can replace directly measured EOVs.
 
-[Once the congress paper is published I will add a link to it]
-
 ### EOV Procedures:
 - [Implicit PCA](https://www.sciencedirect.com/science/article/abs/pii/S0888327004001785): Conventionally, the first Principal Components (PCs) are disregarded to correct Damage Sensitive Features (DSFs). The rationale behind Implicit PCA is that PCs can be categorized between EOV-Sensitive, EOV-Insensitive and Noise, in this order [[1]](#1).
 
