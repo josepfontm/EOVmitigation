@@ -1,6 +1,6 @@
 # EOVmitigation
 
-**Introduction:** This repository contains different EOV Procedures which I have used in publications/works. Additional functions which aid in plotting results are also included.
+**Introduction:** This repository contains different EOV Procedures that I have used in publications/works.
 
 The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal), an on-going project from the [Group of Applied Mechanics and Advanced Manufacturing (GAM)](https://techtransfer.iqs.edu/grupos/applied-mechanics-and-advanced-manufacturing) at IQS School of Engineering-URL.
 
