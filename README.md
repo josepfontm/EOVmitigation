@@ -35,6 +35,8 @@ suggesting that EOV-Sensitive PCs can replace directly measured EOVs.
 - PC-Informed Regression: In this publication, we proposed a method that uses the so-called EOV-Sensitive PCs as a surrogate of the Environmental and Operational variables driving the non-stationary behaviour in the DSFs. Hence, a regression model using EOV-Sensitive PCs as predictors and remaining PCs as explained variables. Previous works have explored the use of natural frequencies as surrogate variables for bridge damage detection [[2]](#2).
 
 ### References:
+The literature regarding EOV Mitigation is extensive. Nonetheless, some examples are presented here for clarity's sake.
+
 <a id="1">[1]</a> 
 A.M. Yan, G. Kerschen, P. De Boe and J.C. Golinval (2005). 
 Structural damage diagnosis under varying environmental conditions - part i: A linear analysis 
