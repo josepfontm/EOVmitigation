@@ -1,9 +1,5 @@
 # EOVmitigation
 
-**Introduction:** This repository contains different EOV Procedures that I have used in publications/works.
-
-The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal), an on-going project from the [Group of Applied Mechanics and Advanced Manufacturing (GAM)](https://techtransfer.iqs.edu/grupos/applied-mechanics-and-advanced-manufacturing) at IQS School of Engineering-URL.
-
 ## Interpreting Environmental Variability from Damage Sensitive Features
 Results presented in the [10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)](https://www.researchgate.net/publication/373757121_Interpreting_Environmental_Variability_from_Damage_Sensitive_Features). Additional information regarding the project can be found in this [presentation](https://www.researchgate.net/publication/372077222_Interpreting_environmental_variability_from_damage-sensitive_features).
 The experimental data used in this work was extracted from the [Small-scale wind turbine blade](https://onlinelibrary.wiley.com/doi/epdf/10.1002/stc.2660/) provided by the [Chair of Structural Mechanics and Monitoring](https://chatzi.ibk.ethz.ch/) from ETH Zürich.
@@ -38,6 +34,9 @@ Specific works on the available approaches:
 
 Our proposal:
 - PC-Informed Regression: In this publication, we proposed a method that uses the so-called EOV-Sensitive PCs as a surrogate of the Environmental and Operational variables driving the non-stationary behaviour in the DSFs. Hence, a regression model using EOV-Sensitive PCs as predictors and remaining PCs as explained variables. Previous works have explored the use of natural frequencies as surrogate variables for bridge damage detection [[3]](#3).
+
+### Pymodal:
+The EOV Procedures that can be found in this repo have been added to the [Pymodal library](https://github.com/grcarmenaty/pymodal), an on-going project from the [Group of Applied Mechanics and Advanced Manufacturing (GAM)](https://techtransfer.iqs.edu/grupos/applied-mechanics-and-advanced-manufacturing) at IQS School of Engineering-URL.
 
 ### References:
 <a id="1">[1]</a> 
