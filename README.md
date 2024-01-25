@@ -4,6 +4,8 @@
 Results presented in the [10th ECCOMAS Thematic Conference on Smart Structures and Materials (SMART 2023)](https://www.researchgate.net/publication/373757121_Interpreting_Environmental_Variability_from_Damage_Sensitive_Features). Additional information regarding the project can be found in this [presentation](https://www.researchgate.net/publication/372077222_Interpreting_environmental_variability_from_damage-sensitive_features).
 The experimental data used in this work was extracted from the [Small-scale wind turbine blade](https://onlinelibrary.wiley.com/doi/epdf/10.1002/stc.2660/) provided by the [Chair of Structural Mechanics and Monitoring](https://chatzi.ibk.ethz.ch/) from ETH Zürich.
 
+This work is part of an on-going collaboration between IQS School of Engineering, University of Southern Denmark and University of Edinburgh.
+
 ### Abstract:
 Mitigation of Environmental and Operational Variabilities (EOVs) remains one
 of the main challenges to adopt Structural Health Monitoring (SHM) technologies. Its implementation
